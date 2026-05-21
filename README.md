@@ -41,6 +41,3 @@ Pulkit Gupta
 Mayank Valecha
 ## Purpose
 This project was created as a college project to practice frontend development, API integration, responsive UI design, and website deployment using GitHub Pages.
-## Purpose
-
-This project was created as a college project to practice frontend development, API integration, responsive UI design, and website deployment using GitHub Pages.
