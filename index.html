@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusAI - World's Top AI Models in One Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <div class="logo">NexusAI</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#models">Models</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <button class="btn btn-outline" id="navLoginBtn">Log In</button>
+            <!-- Account menu (shown when logged in) -->
+            <div class="nav-account" id="navAccount" style="display:none;">
+                <div class="account-avatar" id="accountAvatar" title="My Account">
+                    <span id="avatarInitial">U</span>
+                </div>
+                <div class="account-dropdown" id="accountDropdown">
+                    <div class="account-dropdown-header">
+                        <div class="account-dropdown-name" id="dropdownName">User</div>
+                        <div class="account-dropdown-email" id="dropdownEmail">user@email.com</div>
+                    </div>
+                    <div class="account-dropdown-divider"></div>
+                    <button class="account-dropdown-item" id="dropdownOpenChat">💬 Open Chat</button>
+                    <button class="account-dropdown-item logout-item" id="navLogoutBtn">🚪 Log Out</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container hero-inner">
+            <div class="badge">✨ Nexus 2.0 is now live</div>
+            <h1>World's Top AIs.<br><span class="gradient-text">One Chat.</span></h1>
+            <p class="hero-sub">Stop juggling tabs and subscriptions. NexusAI gives you GPT-4o, Gemini, DeepSeek and more — side by side — for just $12/month.</p>
+            <div class="hero-btns">
+                <button class="btn btn-primary" id="heroGetStarted">Get Started Now →</button>
+                <button class="btn btn-outline" id="heroDemo">Try Live Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-badge">Features</div>
+            <h2 class="section-title">One Window. <span class="gradient-text">Multiple Perspectives.</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Compare All AIs at Once</h3>
+                    <p>Get answers from GPT-4o, Gemini, DeepSeek simultaneously. Compare side-by-side to find the most accurate answer instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Smart Model Selection</h3>
+                    <p>Not sure which model to use? Toggle any combination and compare — coding, writing, research all in one view.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>One Subscription</h3>
+                    <p>Save $100+/month vs individual subscriptions. One plan, all premium models, no juggling multiple accounts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>1 Lakh Tokens / Month</h3>
+                    <p>100,000 tokens every month — more than enough for daily heavy use across all 4 AI models.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Spot Hallucinations</h3>
+                    <p>When multiple models agree, you can trust the answer. When they disagree, you know to verify.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-time Responses</h3>
+                    <p>All models respond in parallel — no waiting. Get complete picture in seconds, not minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODELS -->
+    <section class="models-section" id="models">
+        <div class="container">
+            <div class="section-badge">AI Models</div>
+            <h2 class="section-title">Pick the Best of <span class="gradient-text">Each Model</span></h2>
+            <div class="models-grid">
+                <div class="model-card">
+                    <div class="model-avatar" style="background:rgba(16,163,127,0.15);color:#10a37f;">G</div>
+                    <div class="model-name">GPT-4o</div>
+                    <div class="model-tag">All Rounder</div>
+                    <p class="model-desc">Great for questions, brainstorming, and clear step-by-step explanations.</p>
+                </div>
+                <div class="model-card">
+                    <div class="model-avatar" style="background:rgba(66,133,244,0.15);color:#4285f4;">P</div>
+                    <div class="model-name">Phi-4</div>
+                    <div class="model-tag">Long Context</div>
+                    <p class="model-desc">Handles long documents and images, tracking full context perfectly.</p>
+                </div>
+                <div class="model-card">
+                    <div class="model-avatar" style="background:rgba(167,139,250,0.15);color:#a78bfa;">D</div>
+                    <div class="model-name">DeepSeek R1</div>
+                    <div class="model-tag">Reasoning</div>
+                    <p class="model-desc">Excels at logic, math, and coding with clear, detailed solutions.</p>
+                </div>
+                <div class="model-card">
+                    <div class="model-avatar" style="background:rgba(217,119,87,0.15);color:#d97757;">C</div>
+                    <div class="model-name">Claude 3.5</div>
+                    <div class="model-tag">Co-Writing</div>
+                    <p class="model-desc">Fast, precise, great for everyday tasks and creative writing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-badge">Pricing</div>
+            <h2 class="section-title">Transparent <span class="gradient-text">Pricing</span></h2>
+            
+            <!-- Free Trial Card -->
+            <div class="trial-card-container">
+                <div class="pricing-card">
+                    <h3 class="plan-name">7-Day Trial</h3>
+                    <div class="plan-price">FREE</div>
+                    <p class="plan-sub">No payment required</p>
+                    <ul class="plan-features">
+                        <li>Full access to all AI models</li>
+                        <li>GPT-4o, Gemini & DeepSeek</li>
+                        <li>Side-by-side comparison</li>
+                        <li>No credit card needed</li>
+                        <li>Cancel anytime</li>
+                    </ul>
+                    <button class="btn btn-outline plan-btn" data-plan="Free Trial — 7 Days">
+                        Start Free Trial
+                    </button>
+                </div>
+            </div>
+
+            <!-- Monthly & Annual Cards -->
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="plan-name">Monthly</h3>
+                    <div class="plan-price">$12<span>/mo</span></div>
+                    <p class="plan-sub">Billed monthly</p>
+                    <ul class="plan-features">
+                        <li>Access 4+ premium models</li>
+                        <li>GPT-4o & Gemini 2.0</li>
+                        <li>DeepSeek R1 & Claude 3.5</li>
+                        <li>Side-by-side comparison</li>
+                        <li>1 lakh tokens/month</li>
+                    </ul>
+                    <button class="btn btn-outline plan-btn" data-plan="Monthly — $12/mo">Select Monthly</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="plan-tag">Save 50%</div>
+                    <h3 class="plan-name" style="color:#c084fc;">Annual Pro</h3>
+                    <div class="plan-price">$72<span>/yr</span></div>
+                    <p class="plan-sub">Billed annually — just $6/month</p>
+                    <ul class="plan-features">
+                        <li>Everything in Monthly</li>
+                        <li>Unlimited tokens</li>
+                        <li>Early access to new models</li>
+                        <li>Custom system prompts</li>
+                        <li>Priority API generation</li>
+                    </ul>
+                    <button class="btn btn-primary plan-btn" data-plan="Annual Pro — $72/yr">Select Annual</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARE SECTION -->
+    <section class="compare-section" id="compare">
+        <div class="container">
+            <div class="section-badge">Cost Comparison</div>
+            <h2 class="section-title">Why Pay More for <span class="gradient-text">Less?</span></h2>
+            <p class="compare-sub">Individual subscriptions cost $116+/month. NexusAI gives you everything for just $12.</p>
+
+            <div class="compare-wrapper">
+                <div class="compare-col compare-bad">
+                    <div class="compare-col-header">
+                        <h3>Individual Subscriptions</h3>
+                        <div class="compare-total bad">$116<span>/mo</span></div>
+                        <p>What you're paying now</p>
+                    </div>
+                    <div class="compare-items">
+                        <div class="compare-item">
+                            <span class="compare-model-name">ChatGPT Plus (GPT-4o)</span>
+                            <span class="bad-price">$20/mo</span>
+                        </div>
+                        <div class="compare-item">
+                            <span class="compare-model-name">Claude Pro (Sonnet)</span>
+                            <span class="bad-price">$20/mo</span>
+                        </div>
+                        <div class="compare-item">
+                            <span class="compare-model-name">Google Gemini Advanced</span>
+                            <span class="bad-price">$20/mo</span>
+                        </div>
+                        <div class="compare-item">
+                            <span class="compare-model-name">Perplexity Pro</span>
+                            <span class="bad-price">$20/mo</span>
+                        </div>
+                        <div class="compare-item">
+                            <span class="compare-model-name">Grok Premium</span>
+                            <span class="bad-price">$30/mo</span>
+                        </div>
+                        <div class="compare-item">
+                            <span class="compare-model-name">DeepSeek API</span>
+                            <span class="bad-price">$6/mo</span>
+                        </div>
+                    </div>
+                    <div class="compare-cons">
+                        <div class="compare-con">❌ Multiple subscriptions to manage</div>
+                        <div class="compare-con">❌ Constant tab switching</div>
+                        <div class="compare-con">❌ No side-by-side comparison</div>
+                        <div class="compare-con">❌ Pay for each model separately</div>
+                    </div>
+                </div>
+
+                <div class="vs-badge">VS</div>
+
+                <div class="compare-col compare-good">
+                    <div class="compare-col-header">
+                        <div class="compare-best-tag">🔥 Best Value</div>
+                        <h3>NexusAI</h3>
+                        <div class="compare-total good">$12<span>/mo</span></div>
+                        <p>All models. One subscription.</p>
+                    </div>
+                    <div class="compare-items">
+                        <div class="compare-item">
+                            <span class="compare-model-name">GPT-4o</span>
+                            <span class="good-price">✓ Included</span>
+                        </div>
+                        <div class="compare-item">
+                            <span class="compare-model-name">Gemini 2.0 Flash</span>
+                            <span class="good-price">✓ Included</span>
+                        </div>
+                        <div class="compare-item">
+                            <span class="compare-model-name">DeepSeek R1</span>
+                            <span class="good-price">✓ Included</span>
+                        </div>
+                        <div class="compare-item">
+                            <span class="compare-model-name">Claude 3.5 Haiku</span>
+                            <span class="good-price">✓ Included</span>
+                        </div>
+                        <div class="compare-item">
+                            <span class="compare-model-name">Side-by-side comparison</span>
+                            <span class="good-price">✓ Included</span>
+                        </div>
+                        <div class="compare-item">
+                            <span class="compare-model-name">1 lakh tokens/month</span>
+                            <span class="good-price">✓ Included</span>
+                        </div>
+                    </div>
+                    <div class="compare-cons">
+                        <div class="compare-pro">✅ One login, all models</div>
+                        <div class="compare-pro">✅ Side-by-side answers</div>
+                        <div class="compare-pro">✅ Save $104/month</div>
+                        <div class="compare-pro">✅ Cancel anytime</div>
+                    </div>
+                    <button class="btn btn-primary compare-cta" id="compareCta">Get Started — $12/mo →</button>
+                </div>
+            </div>
+
+            <div class="savings-banner">
+                💰 You save <strong>$104/month</strong> — that's <strong>$1,248/year</strong> back in your pocket
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-badge">FAQ</div>
+            <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>How is NexusAI different from individual subscriptions?</summary>
+                    <p>NexusAI brings multiple AI models in one place. Instead of juggling tabs and subscriptions, get all answers side-by-side for a fraction of the cost.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I choose which AI models to use?</summary>
+                    <p>Yes! Toggle any model on or off at any time during your chat. Use all 4 simultaneously or just one.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do I get unlimited messages?</summary>
+                    <p>You get 1,00,000 tokens per month (1 lakh). Average usage is around 20,000-30,000 tokens — so most users never run out.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Which models are available?</summary>
+                    <p>GPT-4o, Claude 3.5, Gemini 2.0, and DeepSeek R1 — all connected via official APIs with real responses.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do you offer refunds?</summary>
+                    <p>All payments are non-refundable. You may cancel any time to stop future billing.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-logo">NexusAI</div>
+        <p class="footer-copy">
+            © 2026 NexusAI. All rights reserved.
+        </p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+        </div>
+    </div>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal" id="loginModal">
+        <div class="modal-box">
+            <button class="modal-close" id="loginClose">×</button>
+            <div class="modal-logo">NexusAI</div>
+            <h2 class="modal-title">Welcome Back 👋</h2>
+            <p class="modal-sub">Sign in to your account</p>
+            <button class="btn-google" id="loginGoogle">
+                <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                Continue with Google
+            </button>
+            <div class="auth-divider"><span>or sign in with email</span></div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="loginEmail" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password">
+            </div>
+            <button class="btn btn-primary modal-submit" id="loginSubmit">Sign In →</button>
+            <div class="modal-footer-txt">No account? <span class="modal-link" id="goToSignup">Sign up free</span></div>
+        </div>
+    </div>
+
+    <!-- PAYMENT MODAL (FIXED LAYOUT) -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-box modal-box-wide">
+            <button class="modal-close" id="paymentClose">×</button>
+            <div class="modal-logo">NexusAI</div>
+            <h2 class="modal-title">Secure Checkout 🔒</h2>
+
+            <!-- Plan Selector -->
+            <div class="modal-plan-selector">
+                <div class="modal-plan-option" data-plan="Monthly — $12/mo" id="planMonthly">
+                    <div class="modal-plan-name">Monthly</div>
+                    <div class="modal-plan-price">$12<span>/mo</span></div>
+                    <div class="modal-plan-note">Billed monthly</div>
+                </div>
+                <div class="modal-plan-option active" data-plan="Annual Pro — $72/yr" id="planAnnual">
+                    <div class="modal-plan-tag">Best Value 🔥</div>
+                    <div class="modal-plan-name">Annual Pro</div>
+                    <div class="modal-plan-price">$72<span>/yr</span></div>
+                    <div class="modal-plan-note">= $6/mo · Save 50%</div>
+                </div>
+            </div>
+
+            <!-- Payment Method Section -->
+            <div id="payMethodSection">
+                <div class="payment-tabs">
+                    <button class="pay-tab active" data-tab="card">💳 Card</button>
+                    <button class="pay-tab" data-tab="upi">📱 UPI</button>
+                    <button class="pay-tab" data-tab="netbanking">🏦 Net Banking</button>
+                    <button class="pay-tab" data-tab="wallet">👛 Wallet</button>
+                </div>
+
+                <!-- Card Tab -->
+                <div class="pay-tab-content active" id="tab-card">
+                    <div class="card-icons">
+                        <span class="card-icon">VISA</span>
+                        <span class="card-icon">MC</span>
+                        <span class="card-icon">AMEX</span>
+                        <span class="card-icon">RuPay</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Cardholder Name</label>
+                        <input type="text" id="cardName" placeholder="Enter cardholder name">
+                    </div>
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Expiry</label>
+                            <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label>CVC</label>
+                            <input type="text" id="cardCvc" placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UPI Tab -->
+                <div class="pay-tab-content" id="tab-upi">
+                    <div class="form-group">
+                        <label>UPI ID</label>
+                        <input type="text" id="upiId" placeholder="Enter your UPI ID (e.g. name@upi)">
+                    </div>
+                    <div class="upi-apps">
+                        <div class="upi-app">📱 GPay</div>
+                        <div class="upi-app">💜 PhonePe</div>
+                        <div class="upi-app">🟦 Paytm</div>
+                        <div class="upi-app">🔵 BHIM</div>
+                    </div>
+                </div>
+
+                <!-- Net Banking Tab -->
+                <div class="pay-tab-content" id="tab-netbanking">
+                    <div class="form-group">
+                        <label>Select Your Bank</label>
+                        <select id="bankSelect">
+                            <option value="">Select a bank...</option>
+                            <option value="sbi">State Bank of India</option>
+                            <option value="hdfc">HDFC Bank</option>
+                            <option value="icici">ICICI Bank</option>
+                            <option value="axis">Axis Bank</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Wallet Tab -->
+                <div class="pay-tab-content" id="tab-wallet">
+                    <div class="form-group">
+                        <label>Select Wallet</label>
+                        <div class="wallet-grid">
+                            <div class="wallet-option" data-wallet="paytm">🟦 Paytm</div>
+                            <div class="wallet-option" data-wallet="amazon">🟠 Amazon Pay</div>
+                            <div class="wallet-option" data-wallet="phonepe">💜 PhonePe</div>
+                            <div class="wallet-option" data-wallet="googlepay">📱 Google Pay</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="tel" id="walletPhone" placeholder="Enter registered mobile number">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trial Info -->
+            <div id="trialInfo" style="display:none;">
+                <div style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:14px;padding:1rem;text-align:center;margin-bottom:1rem;">
+                    <div style="font-size:1.4rem;">🎉</div>
+                    <div style="font-weight:700;color:#10b981;">7-Day Free Trial — No Payment Needed!</div>
+                    <div style="font-size:0.85rem;color:var(--text-muted);margin-top:0.3rem;">Full access to all 4 AI models for 7 days.</div>
+                    <div style="display:flex;gap:0.5rem;margin-top:0.8rem;justify-content:center;flex-wrap:wrap;">
+                        <div class="trial-plan-choice active" data-after="Monthly — $12/mo" onclick="selectTrialAfterPlan(this)">📅 Monthly — $12/mo</div>
+                        <div class="trial-plan-choice" data-after="Annual Pro — $72/yr" onclick="selectTrialAfterPlan(this)">🔥 Annual — $72/yr <span style="font-size:0.7em;">(Save 50%)</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary modal-submit" id="paymentSubmit">🔐 Pay & Get Access</button>
+            <div class="secure-note">🔒 256-bit SSL · Secure Payment · Cancel anytime</div>
+        </div>
+    </div>
+
+    <!-- SIGNUP MODAL -->
+    <div class="modal" id="signupModal">
+        <div class="modal-box">
+            <button class="modal-close" id="signupClose">×</button>
+            <div class="modal-logo">NexusAI</div>
+            <h2 class="modal-title">Create Account 🚀</h2>
+            <p class="modal-sub">Join thousands using all AIs in one place</p>
+            <button class="btn-google" id="signupGoogle">
+                <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                Continue with Google
+            </button>
+            <div class="auth-divider"><span>or sign up with email</span></div>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="signupName" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="signupEmail" placeholder="Enter your email address">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="signupPassword" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" placeholder="Re-enter your password">
+                </div>
+            </div>
+            <button class="btn btn-primary modal-submit" id="signupSubmit">Create Account →</button>
+            <div class="modal-footer-txt">Already have an account? <span class="modal-link" id="goToLogin">Sign in</span></div>
+        </div>
+    </div>
+
+    <!-- CHAT CONTAINER -->
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-sidebar" id="chatSidebar">
+            <div class="sidebar-header">
+                <span class="chat-logo">NexusAI</span>
+                <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+            </div>
+            <button class="new-chat-btn" id="newChatBtn">➕ New Chat</button>
+            <div class="sidebar-section-label">Recent Chats</div>
+            <div class="chat-history-list" id="chatHistoryList"></div>
+            <div class="sidebar-section-label sidebar-img-label" id="imgGalleryLabel" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+                <span>🎨 Generated Images</span>
+                <span class="img-gallery-count" id="imgGalleryCount" style="font-size:0.7rem;background:rgba(99,102,241,0.3);padding:2px 7px;border-radius:20px;">0</span>
+            </div>
+            <div class="img-gallery-list" id="imgGalleryList" style="display:none;"></div>
+            <div class="sidebar-footer">
+                <button class="btn btn-outline" id="chatClose" style="width:100%;">✕ Exit Chat</button>
+            </div>
+        </div>
+        <div class="chat-right">
+            <div class="chat-header">
+                <div class="chat-header-left">
+                    <button class="chat-back-btn" id="chatBack">← Back</button>
+                    <span class="chat-title-wrap"><span class="status-dot"></span> <span id="activeChatTitle">Nexus Workspace</span></span>
+                </div>
+                <div class="ai-toggles">
+                    <label class="ai-toggle">
+                        <input type="checkbox" class="model-toggle" value="gpt" checked>
+                        <span class="ai-toggle-btn">🟢 GPT-4o</span>
+                    </label>
+                    <label class="ai-toggle">
+                        <input type="checkbox" class="model-toggle" value="claude" checked>
+                        <span class="ai-toggle-btn">🟠 Claude Sonnet</span>
+                    </label>
+                    <label class="ai-toggle">
+                        <input type="checkbox" class="model-toggle" value="gemini" checked>
+                        <span class="ai-toggle-btn">🔵 Phi-4</span>
+                    </label>
+                    <label class="ai-toggle">
+                        <input type="checkbox" class="model-toggle" value="deepseek">
+                        <span class="ai-toggle-btn">🟣 DeepSeek R1</span>
+                    </label>
+                </div>
+            </div>
+            <div class="chat-main" id="chatMain">
+                <div class="chat-welcome">
+                    <h3>🚀 Welcome to Nexus Workspace</h3>
+                    <p>Toggle models above and send a message to query them simultaneously.</p>
+                </div>
+            </div>
+            <div class="chat-input-bar">
+                <!-- Hidden file inputs -->
+                <input type="file" id="cameraInput" accept="image/*" capture="environment" style="display:none">
+                <input type="file" id="photoFileInput" accept="image/*,video/*,.pdf,.doc,.docx,.txt" multiple style="display:none">
+                <input type="file" id="videoInput" accept="video/*" style="display:none">
+
+                <!-- Plus menu popup -->
+                <div class="plus-menu" id="plusMenu">
+                    <button class="plus-menu-item" id="pmCamera">
+                        <span class="plus-menu-icon">📷</span>
+                        <span>Camera</span>
+                    </button>
+                    <button class="plus-menu-item" id="pmPhotos">
+                        <span class="plus-menu-icon">🖼️</span>
+                        <span>Photos & Files</span>
+                    </button>
+                    <button class="plus-menu-item" id="pmVideo">
+                        <span class="plus-menu-icon">🎥</span>
+                        <span>Video</span>
+                    </button>
+                    <button class="plus-menu-item" id="pmCreateImage">
+                        <span class="plus-menu-icon">🎨</span>
+                        <span>Create Image</span>
+                    </button>
+                </div>
+
+                <div class="chat-input-wrap">
+                    <button class="chat-plus-btn" id="chatPlusBtn" title="Attach / Create">＋</button>
+                    <input type="text" id="chatInput" class="chat-input" placeholder="Message all models simultaneously...">
+                    <button class="chat-send" id="chatSend">➤</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
