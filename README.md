@@ -37,7 +37,7 @@ NexusAI/
 ## Live Website
  https://pulkit3765beai25-dotcom.github.io/NexusAi/
 ## Authors
-Pulkit Gupta  
-Mayank Valecha
+Mayank Valecha 
+Pulkit Gupta
 ## Purpose
 This project was created as a college project to practice frontend development, API integration, responsive UI design, and website deployment using GitHub Pages.
