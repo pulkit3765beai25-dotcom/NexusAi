@@ -35,7 +35,7 @@ NexusAI/
 │── favicon.png
 └── README.md
 ## Live Website
-https://github.com/pulkit3765beai25-dotcom/NexusAi.git
+ https://pulkit3765beai25-dotcom.github.io/NexusAi/
 ## Authors
 Pulkit Gupta  
 Mayank Valecha
